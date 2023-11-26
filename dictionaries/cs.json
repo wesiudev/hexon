@@ -1,0 +1,206 @@
+{
+  "Technical": {
+    "loading_please_wait": "Načítání, prosím čekejte..."
+  },
+  "Header": {
+    "community": "SPOLEČNOST",
+    "download": "Stáhnout",
+    "back": "Zpět",
+    "question": "Otázka",
+    "answer": "Odpověď",
+    "sign_in": "Přihlásit se",
+    "generate_images": "Generovat obrázky"
+  },
+  "LoginPage": {
+    "sign_in_to_your_account": "Přihlaste se ke svému účtu",
+    "create_an_account": "Vytvořit účet",
+    "email_address": "Emailová adresa",
+    "password": "Heslo",
+    "log_in": "Přihlásit se",
+    "sign_up": "Registrovat",
+    "dont_have_account": "Nemáte účet?",
+    "create": "Vytvořit",
+    "already_registered": "Již registrován?",
+    "sign_in": "Přihlásit",
+    "forgot_passord": "Zapomněli jste heslo?",
+    "email_recovery": "Obnova hesla emailem",
+    "reset_password": "Obnovit heslo",
+    "user_does_not_exist": "Uživatel neexistuje",
+    "wrong_password": "Nesprávné heslo",
+    "please_enter_valid_email_address": "Zadejte platnou emailovou adresu",
+    "password_is_incorrect": "Heslo je nesprávné",
+    "user_already_exists": "Uživatel již existuje",
+    "password_should_contain_more_than_6_characters": "Heslo by mělo obsahovat více než 6 znaků",
+    "continue_with_google": "Pokračovat s Google",
+    "close": "Zavřít"
+  },
+  "Tutorial": {
+    "render_from_text": "Generujte obrázky z textu",
+    "step": "Krok",
+    "tutorial": "Návod",
+    "next": "Další",
+    "previous": "Zpět",
+    "finish_tutorial": "Dokončit návod"
+  },
+  "Empty": {
+    "hello_it_seems_like_your": "Ahoj! Zdá se, že tvůj",
+    "backpack": "Batoh",
+    "is_empty": "je prázdný.",
+    "specify_the_scenerio_for": "Přemýšlej o svém prvním scénáři a napiš ho pro",
+    "tell_it_what_you_want_to_see_on_your_first": "řekni mu, co chceš vidět na svém prvním",
+    "generation": "vygenerovaném obrázku.",
+    "step_1": "Krok 1.",
+    "generate": "Generovat",
+    "your_first_image": "svůj první obrázek"
+  },
+  "Generator": {
+    "generate": "Generovat",
+    "write_your_prompt_here": "Napište svůj popisek zde...",
+    "generation_details": "Podrobnosti o generování",
+    "title": "Název",
+    "description": "Popis",
+    "author": "Autor",
+    "tags": "Štítky",
+    "visibility": "Viditelnost",
+    "prompt": "Popisek",
+    "public": "Veřejné",
+    "private": "Soukromé",
+    "write_title": "Napište název...",
+    "write_description": "Napište popis...",
+    "save_image": "Uložit obrázek"
+  },
+  "Homepage": {
+    "welcome": "Vítejte v",
+    "decocava": "Decocanva",
+    "hero": "Prožijte kreativní svobodu s",
+    "join": "Připojte se k naší kreativní komunitě ještě dnes!",
+
+    "main_h1": "Připojte se k naší kreativní komunitě ještě dnes!",
+    "main_h2": "Prožijte kreativní svobodu s Decocanvou",
+    "read_more": "Číst více",
+    "download_app": "Stáhnout aplikaci",
+    "capture_h1": "Zachyťte inspiraci s technologií Decocanvy",
+    "capture_h2": "Přetvořte své nápady v dechberoucí vizualizace",
+    "capture_p": "Pusťte uzdu své kreativitě s pokročilou technologií Decocanvy. Zachyťte letité okamžiky inspirace a proměňte je v nadčasová vizuální mistrovská díla. Přijměte budoucnost kreativity už dnes.",
+    "connect_h1": "Spojte se s inspirujícími lidmi",
+    "connect_h2": "Spolupracujte a sdílejte svou tvůrčí cestu",
+    "connect_p": "Decocanva není jen nástroj; je to komunita. Spojte se s lidmi sdílejícími vaše zájmy, spolupracujte na projektech a sdílejte svou tvůrčí cestu. Připojte se k síti inspirujících lidí a nechte svou kreativitu rozkvést.",
+    "create_h1": "Vytvořte úchvatné vizualizace ze svých nápadů",
+    "create_h2": "Oživte své koncepty s Decocanvou",
+    "create_p": "Vaše nápady jsou semínka mimořádných tvorů. S Decocanvou sledujte, jak vaše koncepty ožívají jako úchvatné vizualizace. Udělejte dojem na své publikum, klienty nebo sledující vizualizacemi, které mluví hlasitě.",
+    "explore_h1": "Objevte svoji kreativitu s Decocanvou",
+    "explore_h2": "Ponořte se do světa nekonečných tvůrčích možností",
+    "explore_p": "Ponořte se hluboko do oceánu kreativních nápadů. Prozkoumejte širokou škálu šablon, nástrojů a funkcí řízených umělou inteligencí. Bez ohledu na to, zda jste začátečníkem nebo zkušeným umělcem, objevujte nové horizonty a posouvejte hranice své kreativity.",
+
+    "unleash_h1": "Rozprouděte svou kreativitu",
+    "unleash_h2": "Rozprouděte svou kreativitu a proměňte své nápady ve ohromující vizuální mistrovská díla s pomocí AI Generátoru Decocanva, nejlepšího nástroje na generování obrázků pomocí umělé inteligence. Ať už jste profesionální designér, který usiluje o dokonalost, začínající umělec zkoumající svou kreativitu, nebo nadšenec do sociálních médií, který chce zachytit inspiraci, AI Generátor Decocanva je váš nezbytný nástroj.",
+    "inspiration_drawing_h1": "Inspirace pro Kreslení",
+    "inspiration_drawing_h2": "Poskytněte umělcům inspirativní obrazy generované umělou inteligencí, aby nastartovali své kreslící seance a objevili nové tvůrčí rozměry.",
+
+    "inspiration_painting_h1": "Inspirace pro Malování",
+    "inspiration_painting_h2": "Pomozte malířům objevit různá témata a barevné palety prostřednictvím vizuálních prvků generovaných umělou inteligencí, zvyšující hloubku jejich uměleckých děl.",
+
+    "social_media_h1": "Grafika pro Sociální Média",
+    "social_media_h2": "Navrhujte pozoruhodné grafické prvky pro sociální mediální platformy pomocí pokročilých schopností naší AI Generátoru, posilující online přítomnost a interakci.",
+
+    "educational_h1": "Výukové Materiály",
+    "educational_h2": "Vytvářejte vizuálně atraktivní výukové materiály využíváním technologie umělé inteligence, zlepšující zážitky ze vzdělávání pro studenty i učitele.",
+
+    "marketing_h1": "Marketingové Kampaně",
+    "marketing_h2": "Generujte přizpůsobené vizuály pro marketingové kampaně, reklamy a propagační materiály s precizností a kreativitou umělé inteligence.",
+
+    "books_covers_h1": "Obálky Knih a Alb",
+    "books_covers_h2": "Navrhujte poutavé designy pro obálky knih, e-knih a obaly alb pomocí našeho AI Generátoru, zaujímající čtenáře a posluchače již na první pohled.",
+
+    "interior_design_h1": "Návrhy Interiéru",
+    "interior_design_h2": "Vizualizujte nápady na interiérový design s využitím náladových tabulí a konceptuálních obrázků generovaných umělou inteligencí, nabízející pohled do inovativních a esteticky příjemných prostor.",
+
+    "merchandise_h1": "Vlastní Zboží",
+    "merchandise_h2": "Navrhujte personalizované zboží jako trička, hrníčky a pouzdra na mobilní telefony s jedinečnými a kreativními obrazy generovanými umělou inteligencí, přizpůsobenými individuálním preferencím.",
+
+    "development_h1": "Vývoj Webových Stránek",
+    "development_h2": "Generujte unikátní a poutavé obrázky pomocí síly umělé inteligence pro bezproblémový design webových stránek a angažující uživatelské zkušenosti.",
+
+    "artists_h1": "Umělci",
+    "artists_h2": "Profesionální i amatérští umělci využívají umělou inteligenci a sílu našeho Generátoru pro inspirativní a referenční obrázky, zlepšující své tvůrčí projekty.",
+
+    "designers_h1": "Designéři",
+    "designers_h2": "Grafickí designéři, webdesignéři a UI/UX designéři profitují z vizuálních prvků vysoké kvality generovaných naší AI, zvyšující vliv jejich designové práce.",
+
+    "educators_h1": "Pedagogové",
+    "educators_h2": "Učitelé a pedagogové integrují do svých výukových aktivit a vzdělávacích zdrojů vizuálně přitažlivý materiál generovaný umělou inteligencí, zlepšující výukovou cestu.",
+
+    "students_h1": "Studenti",
+    "students_h2": "Studenti pracující na prezentacích, projektech a kreativních úkolech profitují z atraktivních vizuálů generovaných umělou inteligencí, zlepšující kvalitu a dopad jejich akademické práce.",
+
+    "event_planners_h1": "Organizátoři Událostí",
+    "event_planners_h2": "Organizátoři událostí vytvářejí nezapomenutelné akce s pomocí krásných designů pozvánek a propagačních materiálů generovaných umělou inteligencí, zanechávající trvalý dojem na účastnících se.",
+
+    "writers_musicans_h1": "Spisovatelé a Hudebníci",
+    "writers_musicans_h2": "Autoři a hudebníci využívají umělou inteligencí generované, umělecké a poutavé obálky pro své knihy a alba, zajišťující, že jejich literární a hudební tvorba je vizuálně přitažlivá pro publikum.",
+
+    "influencers_h1": "Influencerové Sociálních Médií",
+    "influencers_h2": "Influencerové zvyšují svou online přítomnost s výraznými grafickými prvky a obrazy generovanými umělou inteligencí pro své příspěvky a kampaně na sociálních médiích, přitahují pozornost svých sledujících.",
+
+    "home_decor_h1": "Nadšenci pro Domovský Dekor",
+    "home_decor_h2": "Lidé, kteří mají zájem o interiérový design a domácí dekor, vizualizují nápady s nápady vytvořenými umělou inteligencí, zkoumají inovativní koncepty pro své obytné prostory.",
+
+    "entrepreneurs_h1": "Podnikatelé",
+    "entrepreneurs_h2": "Podnikatelé a majitelé firem využívají výrazné vizuály generované umělou inteligencí pro marketingové a propagační účely, zajistí, že jejich značka vynikne v digitální krajině.",
+
+    "everyone_h1": "Každý",
+    "everyone_h2": "Kdokoli s kreativní jiskrou objevuje nekonečné možnosti vizuálů generovaných umělou inteligencí, používá Decocanvu pro zábavu, inspiraci a osobní projekty bez jakýchkoli finančních omezení.",
+    "easier_h1": "Kdo používá Decocanva?",
+    "easier_h2": "Decocanva je mocný Generátor Obrazů pomocí umělé inteligence, který bezproblémově spojuje zábavu a práci, umožňuje uživatelům vytvářet ohromující vizuální prvky bez námahy. Ať už hledáte inspiraci pro svůj další umělecký projekt nebo zlepšujete estetiku svých webových stránek, Decocanva je vaším nástrojem na míru. A nejlepší na tom? Je zcela zdarma pro každého, zajistí, že kreativita nezná žádná omezení.",
+    "capabilities_h1": "Co může AI generovat?",
+    "capabilities_h2": "AI může generovat širokou škálu vizuálů, včetně, ale neomezeně na: vlastních designů pro marketingové kampaně, obalů knih a alb, koncepcí interiérů, personalizovaného zboží a vývoje webových stránek. AI mohou využívat i umělci, designéři, vzdělavatelé, studenti, plánovači událostí, spisovatelé a hudebníci, influenceri sociálních médií, nadšenci do bytového designu a podnikatelé k oživení svých kreativních projektů a nápadů. S pomocí AI od Decocanva jsou možnosti nekonečné!"
+  },
+  "Seo": {
+    "title": "Decocanva | Image Generator AI | Stáhněte si zdarma aplikaci",
+    "description": "Objevte kreativní sílu Decocanva, vašeho ultimátního řešení pro generování obrázků! Ať už jste profesionální designér, začínající umělec nebo nadšenec do sociálních médií, Decocanva nabízí bezproblémovou zkušenost, jak proměnit vaše nápady v ohromující vizuální mistrovská díla. Naše stahovatelná aplikace pro počítač a telefon vám umožní snadno navrhovat nápadné grafiky, poutavá umělecká díla a angažující příspěvky na sociálních médiích. Pustěte uzdu své kreativitě s intuitivními nástroji Decocanva, různými šablonami a funkcemi podporovanými umělou inteligencí. Stáhněte si již dnes a nechte volný průběh své fantazii!",
+
+    "keywords": "Generátor obrázků umělé inteligence, Bezplatný generátor obrázků umělé inteligence, Generování obrázku umělou inteligencí, Obrázky umělé inteligence, GPT OpenAI, Učení zpětnou vazbou, Generátor textu umělé inteligence, Chatbot OpenAI, Generativní umělá inteligence, Generované obrázky umělé inteligence, Bezplatný generátor obrázků umělé inteligence, Aplikace OpenAI, Webové stránky Elona Muska o umělé inteligenci, Decocanva Umělá inteligence, Hřiště OpenAI"
+  },
+  "Faq": [
+    {
+      "question": "Co je to Decocanva AI generátor obrázků?",
+      "answer": "Jedná se o pokročilý nástroj umělé inteligence, který generuje obrázky na základě poskytnutých nápadů a popisů."
+    },
+    {
+      "question": "Jak se Decocanva liší od jiných generátorů obrázků?",
+      "answer": "Decocanva využívá pokročilé technologie umělé inteligence, což umožňuje vytvářet jedinečné a kreativní obrázky na základě jednoduchých popisů."
+    },
+    {
+      "question": "Proč bych měl zvolit bezplatný AI generátor obrázků?",
+      "answer": "Bezplatné AI generátory obrázků vám umožňují experimentovat s kreativitou bez nutnosti utrácet peníze. Poskytují možnost tvořit bez finančních omezení."
+    },
+    {
+      "question": "Jak mohu stáhnout bezplatnou aplikaci pro generování obrázků AI?",
+      "answer": "Bezplatnou aplikaci pro generování obrázků AI můžete stáhnout z oficiální webové stránky nebo obchodů s aplikacemi na svůj počítač nebo telefon."
+    },
+    {
+      "question": "Může stahovatelná aplikace vytvářet obrázky na různých zařízeních?",
+      "answer": "Ano, stahovatelná aplikace funguje jak na počítačích, tak na telefonech, což vám umožňuje vytvářet obrázky jak na velkých obrazovkách, tak na mobilních zařízeních."
+    },
+    {
+      "question": "Jaké jsou hlavní funkce stahovatelné aplikace pro generování obrázků?",
+      "answer": "Stahovatelná aplikace usnadňuje návrh atraktivních grafických obrázků, uměleckých děl a příspěvků na sociálních sítích. Nabízí intuitivní nástroje a různé šablony."
+    },
+    {
+      "question": "Je Decocanva dostupný k bezplatnému stažení?",
+      "answer": "Ano, Decocanva nabízí bezplatnou verzi své aplikace, která umožňuje uživatelům používat základní funkce AI generátoru obrázků bez nákladů."
+    },
+    {
+      "question": "Je aplikace Decocanva snadno použitelná pro začátečníky?",
+      "answer": "Ano, Decocanva byl navržen s ohledem na snadnou obsluhu, i pro lidi, kteří teprve začínají s tvorbou grafických obrázků pomocí umělé inteligence."
+    },
+    {
+      "question": "Je k generování obrázků pomocí Decocanva potřeba internetové připojení?",
+      "answer": "Ano, k používání funkcí generování obrázků pomocí Decocanva je potřeba stabilní internetové připojení, aby data mohla být zpracovávána v cloudu."
+    },
+    {
+      "question": "Nabízí aplikace Decocanva technickou podporu pro uživatele?",
+      "answer": "Ano, Decocanva nabízí technickou podporu pro uživatele prostřednictvím různých komunikačních kanálů, jako jsou e-maily nebo online chat, k pomoci při řešení případných problémů s aplikací."
+    }
+  ]
+}
