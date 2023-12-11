@@ -62,6 +62,9 @@ dependencies:
   decode-base64:
     specifier: ^3.0.1
     version: 3.0.1
+  diacritic:
+    specifier: ^0.0.2
+    version: 0.0.2
   eslint:
     specifier: 8.36.0
     version: 8.36.0
@@ -4256,6 +4259,10 @@ packages:
       acorn-node: 1.8.2
       defined: 1.0.1
       minimist: 1.2.8
+
+  /diacritic@0.0.2:
+    resolution: {integrity: sha512-iQCeDkSPwkfwWPr+HZZ49WRrM2FSI9097Q9w7agyRCdLcF9Eh2Ek0sHKcmMWx2oZVBjRBE/sziGFjZu0uf1Jbg==}
+    dev: false
 
   /didyoumean@1.2.2:
     resolution: {integrity: sha512-gxtyfqMg7GKyhQmb056K7M3xszy/myH8w+B4RT+QXBQsvAOdc3XymqDDPHx1BgPgsdAA5SIifona89YtRATDzw==}

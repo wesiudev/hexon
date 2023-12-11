@@ -1,7 +1,7 @@
-import { useUserData } from "@/app/hooks/useUserData";
 import { updateUserTutorial } from "@/common/firebase";
-import { setUser, setUserTutorial } from "@/common/redux/slices/userSlice";
-import { useDispatch } from "react-redux";
+import { setUserTutorial } from "@/common/redux/slices/userSlice";
+import { RootState } from "@/common/redux/store";
+import { useDispatch, useSelector } from "react-redux";
 import * as Scroll from "react-scroll";
 
 interface InfoHover {
@@ -17,9 +17,8 @@ export default function InfoHover({
   description,
   destination,
   side,
-  scroll,
 }: InfoHover) {
-  const { userData } = useUserData();
+  const { userData } = useSelector((state: RootState) => state.user);
   const dispatch = useDispatch();
   const alignElement = () => {
     switch (side) {
@@ -94,7 +93,9 @@ export default function InfoHover({
                     email: userData.email,
                     tutorial: userData.tutorialStep + 1,
                   }),
-                    dispatch(setUserTutorial(userData.tutorialStep + 1));
+                    setTimeout(() => {
+                      dispatch(setUserTutorial(userData.tutorialStep + 1));
+                    }, 1000);
                 }}
                 className="font-normal cursor-pointer text-center text-xl py-2 px-3 w-full bg-gradient-to-r from-blue-900 to-rose-600  hover:from-blue-800 hover:to-rose-500 mt-3 rounded-md"
               >

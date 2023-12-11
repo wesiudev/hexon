@@ -1,20 +1,31 @@
 "use client";
-import capitalizeString from "@/app/utils/CapitalizeString";
+import capitalizeString from "@/common/utils/CapitalizeString";
 import { DocumentData } from "firebase/firestore/lite";
 import Image from "next/image";
 import Link from "next/link";
 import { FaComment, FaFire, FaHeart } from "react-icons/fa";
 
-export const Latest = ({ images }: DocumentData) => {
+export const Latest = ({
+  images,
+  dictionary,
+  lang,
+}: {
+  images: any;
+  dictionary: any;
+  lang: any;
+}) => {
   const cloneImages = [...images];
   cloneImages?.sort((a, b) => b.creationTime - a.creationTime);
   return (
     <div className="flex flex-col sm:pr-3 overflow-x-hidden ">
       <div className="flex flex-row items-center text-xl mb-2">
         <FaFire className="text-red-500" />{" "}
-        <span className="ml-1 not-italic font-light"> Latest </span>
+        <span className="ml-1 not-italic font-light">
+          {" "}
+          {dictionary.latest}{" "}
+        </span>
       </div>
-      <div className="bg-purple-800 p-2 rounded-md">
+      <div className="bg-purple-800 p-2">
         {cloneImages?.map((image, idx) => (
           <div
             key={idx}
@@ -48,10 +59,10 @@ export const Latest = ({ images }: DocumentData) => {
           </div>
         ))}
         <Link
-          href="/generator"
-          className="w-full py-2 flex flex-row justify-center rounded-lg mt-3 bg-gradient-to-tr from-rose-500  to-purple-950 hover:from-rose-500 hover:to-purple-900 duration-75 ease-in px-3 shadow-sm shadow-purple-950"
+          href={`/dashboard/generator`}
+          className="w-full py-2 flex flex-row justify-center rounded-xl mt-3 bg-gradient-to-tr from-purple-900 via-rose-500  to-purple-900 hover:from-purple-800 hover:via-rose-500 hover:to-purple-800 duration-75 ease-in px-3 shadow-sm shadow-purple-900"
         >
-          Generate
+          {dictionary.generate}
         </Link>
       </div>
     </div>

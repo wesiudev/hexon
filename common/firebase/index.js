@@ -14,6 +14,7 @@ import {
   arrayUnion,
 } from "firebase/firestore/lite";
 import { getStorage } from "firebase/storage";
+import moment from "moment";
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -33,9 +34,8 @@ const db = getFirestore(app);
 
 const storage = getStorage(app);
 
-//images
-
-const imagesRef = collection(db, "images");
+const usersRef = collection(db, "usersv2");
+const imagesRef = collection(db, "imagesv2");
 
 async function getPrimaryImages(count) {
   const filter = query(
@@ -65,25 +65,21 @@ async function getImageById(src) {
   const filter = query(imagesRef, where("src", "==", src));
   const response = await getDocs(filter);
   const image = response.docs.map((doc) => ({ id: doc.id }));
-  const imageRef = doc(db, "images", image[0]?.id);
+  const imageRef = doc(db, "imagesv2", image[0]?.id);
   return imageRef;
 }
 async function addComment(req) {
-  console.log(req);
   const imageRef = await getImageById(req.src);
   await updateDoc(imageRef, {
     commnents: arrayUnion(req.commentValue),
   });
 }
 
-//users
-const usersRef = collection(db, "users");
-
 async function getUserById(req) {
   const filter = query(usersRef, where("email", "==", req.email));
   const response = await getDocs(filter);
   const user = response.docs.map((doc) => ({ id: doc.id }));
-  const userRef = doc(db, "users", user[0]?.id);
+  const userRef = doc(db, "usersv2", user[0]?.id);
   return userRef;
 }
 
@@ -101,7 +97,8 @@ async function getUser(req) {
       email: req.email,
       hasPlan: false,
       balance: 300,
-      tutorialStep: 0,
+      tutorialStep: -1,
+      configurated: false,
       accountHistory,
       isPrivate: true,
       isVerified: false,
@@ -116,17 +113,33 @@ async function getUser(req) {
     return user[0];
   }
 }
-async function updateUserHistory(req) {
-  const userRef = await getUserById(req);
+async function updateUserHistory(user) {
+  const userRef = await getUserById(user);
   await updateDoc(userRef, {
-    accountHistory: arrayUnion(req.accountHistory),
+    accountHistory: arrayUnion(user.accountHistory),
   });
 }
-async function updateUserTutorial(req) {
-  const userRef = await getUserById(req);
+async function updateUserTutorial(user) {
+  const userRef = await getUserById(user);
   await updateDoc(userRef, {
-    tutorialStep: req.tutorial,
+    tutorialStep: user.tutorial,
   });
+}
+async function updateUser(user, newUser) {
+  const userRef = await getUserById(user);
+  const filter = query(usersRef, where("userName", "==", newUser.userName));
+  const response = await getDocs(filter);
+  const res = response.docs.map((doc) => doc.data());
+
+  if (res[0]?.userName === newUser.userName) {
+    return { error: "userName-Taken" };
+  } else if (!res.length) {
+    await updateDoc(userRef, { ...newUser, configurated: true });
+    const filter = query(usersRef, where("userName", "==", newUser.userName));
+    const response = await getDocs(filter);
+    const res = response.docs.map((doc) => doc.data());
+    return res;
+  }
 }
 async function updateUserLevel(req) {
   const { level, pointsToAdd, accountExperience, pointsNeeded } = req;
@@ -162,4 +175,5 @@ export {
   updateUserHistory,
   updateUserTutorial,
   updateUserLevel,
+  updateUser,
 };

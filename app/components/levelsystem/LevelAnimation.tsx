@@ -1,19 +1,11 @@
 "use client";
 import { useState } from "react";
 import CountingAnimation from "@/app/components/levelsystem/CountingAnimation";
-import { useUserData } from "@/app/hooks/useUserData";
-import {
-  FaCoins,
-  FaHome,
-  FaScrewdriver,
-  FaTools,
-  FaUser,
-} from "react-icons/fa";
+import { FaCoins, FaTools, FaUser } from "react-icons/fa";
 import { calculateLevel } from "@/app/components/levelsystem/CalculateLevel";
 import Link from "next/link";
 
-export const LevelAnimation = () => {
-  const { userData } = useUserData();
+export const LevelAnimation = ({ userData }: { userData: any }) => {
   const { pointsNeeded } = calculateLevel(
     userData.accountLevel,
     userData.accountExperience,
@@ -21,6 +13,7 @@ export const LevelAnimation = () => {
   );
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [active, setActive] = useState(0);
+
   return (
     <>
       {isMenuOpen === false && (

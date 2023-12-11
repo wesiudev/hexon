@@ -1,7 +1,6 @@
-//READY TO DEPLOY
 import { Providers } from "@/common/redux/Provider";
-import { getDictionary } from "@/get-dictionary";
-import { Locale, i18n } from "@/i18n-config";
+import { getDictionary } from "@/common/i18n/get-dictionary";
+import { Locale, i18n } from "@/common/i18n/i18n-config";
 import "@/styles/globals.css";
 import localFont from "next/font/local";
 import Script from "next/script";

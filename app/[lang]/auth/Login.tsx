@@ -7,7 +7,7 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from "firebase/auth";
-import { provider, auth } from "@/common/firebase";
+import { provider, auth, getUser } from "@/common/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import GoogleAuthButtons from "./GoogleAuth";
 import { redirect } from "next/navigation";
@@ -16,6 +16,9 @@ import Link from "next/link";
 import { FaEnvelope, FaKey } from "react-icons/fa";
 import Hero from "@/app/components/hero/Hero";
 import ResetPasswordForm from "./ResetPasswordForm";
+import { useDispatch } from "react-redux";
+import { setUser } from "@/common/redux/slices/userSlice";
+import Loading from "../loading";
 
 export default function Login({ dictionary }: { dictionary: any }) {
   const [user, loading] = useAuthState(auth);
@@ -25,8 +28,9 @@ export default function Login({ dictionary }: { dictionary: any }) {
   const [password, setPassword] = useState<string>("");
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
-  const [imagesLoaded, setImagesLoaded] = useState(false);
+  const dispatch = useDispatch();
   if (user) {
+    getUser(user).then((res: any) => dispatch(setUser(res)));
     redirect("/dashboard");
   }
   function handleLogin() {
@@ -52,7 +56,9 @@ export default function Login({ dictionary }: { dictionary: any }) {
   function emailPasswordLogin() {
     if (email.includes("@") && email.includes(".")) {
       signInWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {})
+        .then((userCredential) => {
+          console.log(userCredential);
+        })
         .catch((error) => {
           if (error.code === "auth/user-not-found") {
             setEmailError(dictionary.LoginPage.user_does_not_exist);
@@ -124,6 +130,9 @@ export default function Login({ dictionary }: { dictionary: any }) {
         setPasswordError("");
       }, 7500);
     }
+  }
+  if (loading) {
+    return <Loading />;
   }
   return (
     <>
