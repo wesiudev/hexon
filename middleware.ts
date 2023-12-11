@@ -1,41 +1,36 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-
 import { i18n } from "./common/i18n/i18n-config";
-
 import { match as matchLocale } from "@formatjs/intl-localematcher";
 import Negotiator from "negotiator";
 
 function getLocale(request: NextRequest): string | undefined {
-  // Negotiator expects plain object so we need to transform headers
   const negotiatorHeaders: Record<string, string> = {};
   request.headers.forEach((value, key) => (negotiatorHeaders[key] = value));
 
-  // Use negotiator and intl-localematcher to get best locale
-  let languages = new Negotiator({ headers: negotiatorHeaders }).languages();
-  // @ts-ignore locales are readonly
-  const locales: string[] = i18n.locales;
+  const languages = new Negotiator({ headers: negotiatorHeaders }).languages();
+  const locales = i18n.locales;
   return matchLocale(languages, locales, i18n.defaultLocale);
 }
 
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
-  const PUBLIC_FILE = /^\/public\//;
+
   // Ignore files in the public folder
-  if (PUBLIC_FILE.test(request.nextUrl.pathname)) {
+  if (/^\/public\//.test(pathname)) {
     return;
   }
-  // `/_next/` and `/api/` are ignored by the watcher, but we need to ignore files in `public` manually.
-  // If you have one
-  if (
-    [
-      "/manifest.json",
-      "/favicon.ico",
-      "/public/*",
-      // Your other files in `public`
-    ].includes(pathname)
-  )
+
+  // Ignore specific paths
+  const ignoredPaths = [
+    "/manifest.json",
+    "/favicon.ico",
+    // Add other paths as needed
+  ];
+
+  if (ignoredPaths.some((path) => pathname.startsWith(path))) {
     return;
+  }
 
   // Check if there is any supported locale in the pathname
   const pathnameIsMissingLocale = i18n.locales.every(
@@ -46,13 +41,21 @@ export function middleware(request: NextRequest) {
   if (pathnameIsMissingLocale) {
     const locale = getLocale(request);
 
-    // e.g. incoming request is /products
-    // The new URL is now /en-US/products
-    return NextResponse.redirect(new URL(`${locale}/${pathname}`, request.url));
+    // If no supported locale is found, use the default locale
+    const targetLocale = locale || i18n.defaultLocale;
+
+    // Build the new URL with the detected or default locale
+    const newUrl = new URL(
+      `${request.nextUrl.origin}/${targetLocale}${pathname}`
+    );
+
+    // Redirect to the new URL
+    return NextResponse.redirect(newUrl);
   }
 }
 
 export const config = {
+  // Adjust the matcher to include paths that should be handled by the middleware
   matcher: [
     "/((?!api|_next/static|_next/public/assets|_ipx|_next/_ipx|_ipx/w_640,q_75|_next/_ipx/w_640,q_75|_next/image|assets|favicon.ico|sw.js).*)",
   ],
