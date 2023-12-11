@@ -68,10 +68,11 @@ export default function Dashboard({
   if (!images.length && !loadingImages) {
     redirect("/backpack/empty");
   }
-
+  if (!images || loadingImages) {
+    return <Loading />;
+  }
   return (
     <>
-      {(!images || loadingImages) && <Loading />}
       <div className="mx-auto w-[90vw] py-12 font-sans italic relative">
         <ToastContainer />
         {!userData.configurated && userData.tutorialStep === -1 && (
