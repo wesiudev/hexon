@@ -32,6 +32,7 @@ import NewAccount from "./newAccount";
 import { RootState } from "@/common/redux/store";
 import { GiLightBackpack } from "react-icons/gi";
 import { ToastContainer } from "react-toastify";
+import { useAuthState } from "react-firebase-hooks/auth";
 export default function Dashboard({
   lang,
   dictionary,
@@ -40,6 +41,7 @@ export default function Dashboard({
   dictionary: any;
 }) {
   const { userData } = useSelector((state: RootState) => state.user);
+  const [user, loading] = useAuthState(auth);
   const { loadingImages, images } = useSelector(
     (state: RootState) => state.images
   );
@@ -68,8 +70,11 @@ export default function Dashboard({
   if (!images.length && !loadingImages) {
     redirect("/backpack/empty");
   }
-  if (!images || loadingImages) {
+  if (!user && loading) {
     return <Loading />;
+  }
+  if (!user && !loading) {
+    redirect("/auth");
   }
   return (
     <>
