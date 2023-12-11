@@ -68,7 +68,7 @@ export default function Dashboard({
     redirect("/auth");
   }
   if (!images.length && !loadingImages) {
-    redirect("/backpack/empty");
+    redirect("/dashboard/backpack/empty");
   }
   if (!user && loading) {
     return <Loading />;
