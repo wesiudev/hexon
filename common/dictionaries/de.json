@@ -76,10 +76,10 @@
   "Tutorial": {
     "render_from_text": "Bilder aus Text generieren",
     "step": "Schritt",
-    "tutorial": "Anleitung",
+    "tutorial": "Tutorial",
     "next": "Weiter",
     "previous": "Zurück",
-    "finish_tutorial": "Anleitung abschließen"
+    "finish_tutorial": "Tutorial beenden"
   },
   "Empty": {
     "hello_it_seems_like_your": "Hallo! Es sieht so aus, als ob dein",

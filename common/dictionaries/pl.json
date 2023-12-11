@@ -73,7 +73,14 @@
     "close": "Zamknij",
     "password_reset_success": "E-mail z resetem hasła został wysłany. Sprawdź swoją skrzynkę odbiorczą."
   },
-
+  "Tutorial": {
+    "render_from_text": "Generuj obrazy z tekstu",
+    "step": "Krok",
+    "tutorial": "Samouczek",
+    "next": "Dalej",
+    "previous": "Poprzedni",
+    "finish_tutorial": "Zakończ samouczek"
+  },
   "Empty": {
     "hello_it_seems_like_your": "Cześć! Wygląda na to, że Twój",
     "backpack": "Plecak",

@@ -37,6 +37,7 @@
     "changing_userName": "Mění se uživatelské jméno...",
     "next_change": "Další změna bude k dispozici: "
   },
+
   "Technical": {
     "loading_please_wait": "Načítání, čekejte prosím..."
   },
@@ -74,11 +75,11 @@
     "password_reset_success": "E-mail s resetem hesla byl odeslán. Zkontrolujte svou doručenou poštu."
   },
   "Tutorial": {
-    "render_from_text": "Generujte obrázky z textu",
+    "render_from_text": "Generovat obrázky z textu",
     "step": "Krok",
     "tutorial": "Návod",
     "next": "Další",
-    "previous": "Zpět",
+    "previous": "Předchozí",
     "finish_tutorial": "Dokončit návod"
   },
   "Empty": {

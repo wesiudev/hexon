@@ -40,6 +40,7 @@
   "Technical": {
     "loading_please_wait": "Laden, even geduld aub..."
   },
+
   "Header": {
     "community": "GEMEENSCHAP",
     "download": "Downloaden",
@@ -74,12 +75,12 @@
     "password_reset_success": "E-mail voor het resetten van het wachtwoord is verzonden. Controleer jouw inbox."
   },
   "Tutorial": {
-    "render_from_text": "Genereer afbeeldingen uit tekst",
+    "render_from_text": "Afbeeldingen genereren uit tekst",
     "step": "Stap",
     "tutorial": "Handleiding",
     "next": "Volgende",
     "previous": "Vorige",
-    "finish_tutorial": "Voltooien Handleiding"
+    "finish_tutorial": "Handleiding voltooien"
   },
   "Empty": {
     "hello_it_seems_like_your": "Hallo! Het lijkt erop dat jouw",
