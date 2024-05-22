@@ -69,12 +69,12 @@ export default async function Home() {
                 Kim jesteśmy?
               </h2>
               <p className="text-base font-light max-w-[45rem] mt-4 text-justify lg:text-left">
-                Jesteśmy liderem w branży OZE, <b>Hexon</b>. Zafascynowanymi
+                Jesteśmy liderem w branży OZE - Hexon. Zafascynowani
                 termomodernizacjami, fotowoltaiką i pompami ciepła, doskonale
-                zdawaliśmy sobie sprawę, że to rozwiązania, które sprawią, że
-                ludzie zaczną chcieć odchodzić od &quot;klasycznych&quot; źródeł
-                ciepła. Zresztą... Nie myliliśmy się. Ilość domów z instalacjami
-                fotowoltaicznymi czy pompami ciepła rośnie z każdym dniem.
+                zdawaliśmy sobie sprawę, że to rozwiązania, które skłonią ludzi
+                do rezygnacji z tradycyjnych źródeł ciepła. I mieliśmy rację.
+                Liczba domów z instalacjami fotowoltaicznymi i pompami ciepła
+                rośnie z każdym dniem.
               </p>
               <div className="mt-3">
                 <span className="text-base">W skrócie: </span>
