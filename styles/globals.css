@@ -42,13 +42,13 @@ body {
   }
 
   .scrollbar::-webkit-scrollbar-thumb {
-    background: rgb(163, 71, 243);
+    background: #52eba7;
     border-radius: 99px;
     padding: 2px;
   }
 
   .scrollbar::-webkit-scrollbar-thumb:hover {
-    background: rgb(163, 111, 209);
+    background: #52eba6a4;
   }
   .menu {
     background-color: transparent;
@@ -274,4 +274,22 @@ body {
   .swiper-slide-shadow-right {
     display: none;
   }
+}
+@keyframes slide-left-to-right {
+  0% {
+    transform: translateX(-10px), rotate(10deg);
+    scale: 1.1;
+  }
+  50% {
+    scale: 0.9;
+    transform: translateX(10px);
+  }
+  100% {
+    scale: 1.1;
+    transform: translateX(-10px), rotate(-10deg);
+  }
+}
+
+.animate-left-to-right {
+  animation: slide-left-to-right 15s ease-in-out infinite;
 }
