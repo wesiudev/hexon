@@ -15,7 +15,6 @@ import { useState } from "react";
 import Link from "next/link";
 import { FaEnvelope, FaKey } from "react-icons/fa";
 import Hero from "@/app/components/hero/Hero";
-import ResetPasswordForm from "./ResetPasswordForm";
 import { useDispatch } from "react-redux";
 import { setUser } from "@/common/redux/slices/userSlice";
 import Loading from "../loading";
@@ -270,12 +269,6 @@ export default function Login({ dictionary }: { dictionary: any }) {
               </div>
             </div>
           </div>
-          {forgotPassword && (
-            <ResetPasswordForm
-              dictionary={dictionary}
-              setForgotPassword={setForgotPassword}
-            />
-          )}
         </div>
       </section>
     </>
