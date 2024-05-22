@@ -43,12 +43,12 @@ export default function Header() {
         <div className="fixed w-full h-16 bottom-0 left-0 flex flex-row items-center justify-evenly text-white bg-gradient-to-r from-zinc-800 via-gray-500 to-zinc-800">
           {[
             {
-              href: "/",
+              href: "#",
               icon: <FaHome className="h-6 w-6 sm:mr-3" />,
               text: "HOME",
             },
             {
-              href: "https://hexon.eco",
+              href: "#",
               icon: <FaPeopleArrows className="h-6 w-6 sm:mr-3" />,
               text: <span className="text-white">DOFINANSOWANIE</span>,
             },

@@ -27,16 +27,14 @@ export default async function Home() {
             </div>
             <div className="flex flex-col-reverse lg:flex-row z-30 w-full lg:space-x-3 justify-center items-center sm:w-max mt-12 mx-auto lg:mx-0">
               <Link
-                target="_blank"
-                href={`https://hexon.eco`}
+                href={`#`}
                 className="py-3 px-5 text-sm lg:text-base sm:pl-0 mt-4 lg:mt-0 w-max sm:w-auto hover:scale-110 duration-200 in-out text-white rounded-lg cursor-pointer"
               >
                 ZOSTAŃ DORADCĄ
               </Link>
 
               <Link
-                target="_blank"
-                href={`https://hexon.eco`}
+                href={`#`}
                 className="py-3 px-5 w-max text-base sm:w-auto bg-gradient-to-br from-[#C5FF17] to-[#33E5CF] hover:scale-110 duration-200 ease-in-out text-zinc-800 rounded-lg cursor-pointer font-bold"
               >
                 DOFINANSOWANIE
