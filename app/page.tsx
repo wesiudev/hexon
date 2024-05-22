@@ -13,7 +13,7 @@ export default async function Home() {
         <div className="mx-auto grid lg:grid-cols-2">
           <h1 className="z-50">
             <Image
-              src="/logo-hexon.png"
+              src="/logo-hexon-work.png"
               width={400}
               height={400}
               alt=""
