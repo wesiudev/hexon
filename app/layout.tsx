@@ -4,53 +4,7 @@ import Script from "next/script";
 import AOSInit from "./components/AOS";
 import { Providers } from "@/common/redux/Provider";
 import ClientFormWrapper from "./components/cta/ClientFormWrapper";
-
-// export async function generateMetadata() {
-// if (dictionary) {
-//   const title = dictionary.Seo?.title;
-//   const description = dictionary.Seo?.description;
-//   const keywords = dictionary.Seo?.keywords;
-//   const faqQuestions: Question[] =
-//     dictionary.Faq?.map((faq) => ({
-//       "@type": "Question",
-//       name: faq.question,
-//       acceptedAnswer: {
-//         "@type": "Answer",
-//         text: faq.answer,
-//       },
-//     })) ?? [];
-//   type CustomFAQPage = FAQPage & {
-//     "@context": string;
-//   };
-//   const faqPage: CustomFAQPage = {
-//     "@context": "https://schema.org",
-//     "@type": "FAQPage",
-//     mainEntity: faqQuestions,
-//   };
-//   return {
-//     title,
-//     description,
-//     keywords,
-//     verification: {
-//       google: "google85185d3abec28326.html",
-//     },
-//     icon: "/favicon.ico",
-//     openGraph: {
-//       type: "website",
-//       url: "https://decocanva.com",
-//       title,
-//       description,
-//       siteName: "Decocanva",
-//       images: [
-//         {
-//           url: "/favicon.ico",
-//         },
-//       ],
-//     },
-//     schema: [faqPage],
-//   };
-// }
-// }
+import { Metadata } from "next";
 
 export default async function Root({
   children,
@@ -81,6 +35,24 @@ export default async function Root({
     </html>
   );
 }
+export const metadata: Metadata = {
+  title:
+    "Hexon Group - Dofinansowanie na termomodernizacje budynków | Czyste Powietrze",
+  description:
+    "Kompleksowa termomodernizacja budynków. Fotowoltaika, pompy ciepła. Specjaliści od dofinansowań. Zyskaj do 136200zł dofinansowania",
+  authors: [{ name: "wesiu.dev", url: "https://wesiu.dev" }],
+  publisher: "wesiu.dev",
+  keywords:
+    "dotacje, finansowanie, termomodernizacja, remont, modernizacja energetyczna, oszczędność energii, efektywność energetyczna, wsparcie finansowe, programy rządowe, fundusze unijne, poprawa izolacji, renowacja budynków, energooszczędność, zrównoważony rozwój, dotacje unijne",
+  icons: [
+    {
+      url: "/favicon.ico",
+      sizes: "48x48",
+      type: "image/x-icon",
+    },
+  ],
+};
+
 //font
 const gotham = localFont({
   src: [
