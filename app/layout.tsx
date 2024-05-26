@@ -1,6 +1,9 @@
 import "@/styles/globals.css";
 import localFont from "next/font/local";
 import Script from "next/script";
+import AOSInit from "./components/AOS";
+import { Providers } from "@/common/redux/Provider";
+import ClientFormWrapper from "./components/cta/ClientFormWrapper";
 
 // export async function generateMetadata() {
 // if (dictionary) {
@@ -56,8 +59,12 @@ export default async function Root({
 }) {
   return (
     <html lang="pl">
-      <body className={`${cocosharp.variable}`}>
-        {children}
+      <body className={`${cocosharp.variable} ${gotham.variable}`}>
+        <AOSInit />
+        <Providers>
+          {children}
+          <ClientFormWrapper />{" "}
+        </Providers>
         <Script
           strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXX"
@@ -75,6 +82,26 @@ export default async function Root({
   );
 }
 //font
+const gotham = localFont({
+  src: [
+    {
+      path: "../public/fonts/Gotham.ttf",
+      weight: "400",
+      style: "regular",
+    },
+    {
+      path: "../public/fonts/Gotham-Light.ttf",
+      weight: "300",
+      style: "light",
+    },
+    {
+      path: "../public/fonts/GothamBold.ttf",
+      weight: "500",
+      style: "bold",
+    },
+  ],
+  variable: "--font-gotham",
+});
 const cocosharp = localFont({
   src: [
     {

@@ -8,8 +8,10 @@ import {
 import Link from "next/link";
 import Faq from "../faq";
 import { useState } from "react";
-
+import { setModalVisible } from "@/common/redux/slices/actionSlice";
+import { useDispatch } from "react-redux";
 export default function Header({ view }: { view: any }) {
+  const dispatch = useDispatch();
   const [isFaqOpen, setFaqOpen] = useState<boolean>(false);
   const faqs = [
     {
@@ -34,12 +36,15 @@ export default function Header({ view }: { view: any }) {
     },
   ];
   return (
-    <header className="fixed left-0 top-6 w-full z-[1000] font-sans">
+    <header className="fixed left-0 top-6 w-full z-[500] font-sans">
       <Faq faqs={faqs} isFaqOpen={isFaqOpen} setFaqOpen={setFaqOpen} />
       <div className="w-[98vw] mx-auto flex flex-row justify-end px-6">
-        <div className="flex flex-row items-center hover:scale-110 duration-200 cursor-pointer fixed bottom-[63px] w-max px-4 py-2 left-[50%] -translate-x-[50%] bg-gradient-to-br from-[#C5FF17] to-[#33E5CF] text-zinc-800 rounded-t-xl text-sm">
+        <button
+          onClick={() => dispatch(setModalVisible("client"))}
+          className="flex flex-row items-center hover:scale-110 duration-200 cursor-pointer fixed bottom-[63px] w-max px-4 py-2 left-[50%] -translate-x-[50%] bg-gradient-to-br from-[#C5FF17] to-[#33E5CF] text-zinc-800 rounded-t-xl text-sm"
+        >
           SKONTAKTUJ SIĘ
-        </div>
+        </button>
         <div className="fixed w-full h-16 bottom-0 left-0 flex flex-row items-center justify-evenly text-white bg-gradient-to-r from-zinc-800 via-gray-500 to-zinc-800">
           {[
             {
@@ -48,7 +53,7 @@ export default function Header({ view }: { view: any }) {
               text: "HOME",
             },
             {
-              href: "/#",
+              href: "/#about",
               icon: <FaPeopleArrows className="h-6 w-6 sm:mr-3" />,
               text: <span className="text-white">DOFINANSOWANIE</span>,
             },
@@ -71,8 +76,8 @@ export default function Header({ view }: { view: any }) {
           </button>
         </div>
         {view !== "recruitment" && (
-          <div className="cursor-pointer flex flex-row justify-center items-center">
-            <Link href={`/?view=recruitment`}>
+          <div className="cursor-pointer flex flex-row justify-center items-center z-[30] relative">
+            <Link href={`/recruitment`}>
               <div className="hover:scale-110 duration-200 ease-in-out flex flex-row items-center bg-gradient-to-br from-[#C5FF17] to-[#33E5CF] border-px rounded-lg px-3 py-2">
                 <FaUser className="mr-2 h-5 w-5 text-zinc-800" />
                 <span className="text-zinc-800">Dołącz do nas</span>

@@ -1,25 +1,16 @@
 "use client";
 import * as Scroll from "react-scroll";
-
-import { FaLink } from "react-icons/fa";
-
-export default function ScrollTo({
-  destination,
-  title,
-}: {
-  destination: string;
-  title: string;
-}) {
+export default function ScrollTo() {
   let ScrollTo = Scroll.Link;
 
   return (
     <ScrollTo
-      to={destination}
+      to="about"
       smooth={true}
       duration={750}
-      className="py-3 pr-5 w-max sm:w-auto hover:underline hover:underline-offset-1 rounded-lg sm:text-xl text-gray-100 cursor-pointer"
+      className="lg:ml-3 py-3 px-5 w-max text-base sm:w-auto bg-gradient-to-br from-[#C5FF17] to-[#33E5CF] hover:scale-110 duration-200 ease-in-out text-zinc-800 rounded-lg cursor-pointer font-bold"
     >
-      {title}
+      DOFINANSOWANIE
     </ScrollTo>
   );
 }

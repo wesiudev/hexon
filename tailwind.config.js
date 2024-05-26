@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["var(--font-cocosharp)"],
+        gotham: ["var(--font-gotham)"],
       },
       animation: {
         "gradient-x": "gradient-x 1.75s ease infinite",
