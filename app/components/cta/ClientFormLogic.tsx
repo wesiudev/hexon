@@ -481,6 +481,7 @@ export default function ClientFormLogic() {
                 Powrót
               </button>
               <button
+                disabled={isSending === "success"}
                 onClick={() => {
                   pushLead({ ...formData, id: uuidv4() }).then(() => {
                     setIsSending("success");
