@@ -4,7 +4,7 @@ import Hero from "../components/hero/Hero";
 
 export default function Page() {
   return (
-    <div className="font-sans w-full bg-[#222222] pb-48 h-full px-48">
+    <div className="font-sans w-full bg-[#222222] pb-48 h-full px-4 sm:px-12 lg:px-24 xl:px-48">
       <div className="z-[30] fixed h-screen w-full left-0 top-0">
         <Hero />
       </div>
@@ -99,6 +99,10 @@ export default function Page() {
             Szkolenie wdrożeniowe na miejscu
           </li>
         </ul>
+        <p className="mt-4">
+          Prosimy o składanie CV na adres mailowy:{" "}
+          <span className="text-green-500">biuro@hexon.eco</span>
+        </p>
       </div>
     </div>
   );
