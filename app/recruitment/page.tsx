@@ -33,7 +33,9 @@ export default function Page() {
           dla domów jednorodzinnych i bliźniaków, przeprowadzenie wywiadu z
           klientem oraz finalizowanie umowy.
         </p>
-        <h2 className="text-2xl font-bold mt-12">Wymagania:</h2>
+        <h2 className="text-2xl font-bold mt-12 bg-gradient-to-r from-[#B4FC2D] to-[#3EE7C0] bg-clip-text text-transparent">
+          Wymagania:
+        </h2>
         <ul className="text-white mt-4">
           <li className="flex flex-row items-center">
             <div className="w-2.5 h-2.5 rounded-full bg-[#52eba7] mr-2" />
@@ -57,7 +59,7 @@ export default function Page() {
           </li>
         </ul>
 
-        <h2 className="text-2xl font-bold mt-12">
+        <h2 className="text-2xl font-bold mt-12 bg-gradient-to-r from-[#B4FC2D] to-[#3EE7C0] bg-clip-text text-transparent">
           Kariera w Hexon - dlaczego warto?
         </h2>
 
@@ -82,7 +84,9 @@ export default function Page() {
           kwestiach praktycznych, jak i technicznych, z dużym naciskiem na
           rozwój do poziomu dyrektora.
         </p>
-        <h2 className="text-2xl font-bold mt-12">Proces rekrutacyjny:</h2>
+        <h2 className="text-2xl font-bold mt-12 bg-gradient-to-r from-[#B4FC2D] to-[#3EE7C0] bg-clip-text text-transparent">
+          Proces rekrutacyjny:
+        </h2>
         <ul className="text-white mt-4">
           <li className="flex flex-row items-center">
             <p className="text-[#52eba7] mr-2">1.</p>
@@ -101,7 +105,9 @@ export default function Page() {
         </ul>
         <p className="mt-4">
           Prosimy o składanie CV na adres mailowy:{" "}
-          <span className="text-green-500">biuro@hexon.eco</span>
+          <span className="bg-gradient-to-r from-[#B4FC2D] to-[#3EE7C0] bg-clip-text text-transparent">
+            biuro@hexon.eco
+          </span>
         </p>
       </div>
     </div>
