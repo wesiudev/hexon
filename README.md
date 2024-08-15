@@ -15,7 +15,10 @@ To run on localhost follow these steps:
 
 1. create .env.local file with following data:
 
-NEXT_PUBLIC_API_KEY
+```
+NEXT_PUBLIC_API_KEY (create your own)
+
+firebase app data:
 
 NEXT_PUBLIC_FIREBASE_API_KEY
 
@@ -31,8 +34,8 @@ NEXT_PUBLIC_FIREBASE_APP_ID
 
 NEXT_PUBLIC_FIREBASE_MEASURMENT_ID
 
-NEXT_PUBLIC_URL=http://localhost:3000
-
+NEXT_PUBLIC_URL=http://localhost:3000 or domain
+```
 2. npm install
 
 3. npm run dev
