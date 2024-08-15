@@ -10,7 +10,9 @@
 ![image](https://github.com/user-attachments/assets/148b4086-35cd-43d3-9c8f-676842d05627)
 
 To run on localhost follow these steps:
+
 0. delete pnpm-lock.yaml
+
 1. create .env.local file with following data:
 
 NEXT_PUBLIC_API_KEY
@@ -32,4 +34,5 @@ NEXT_PUBLIC_FIREBASE_MEASURMENT_ID
 NEXT_PUBLIC_URL=http://localhost:3000
 
 2. npm install
+
 3. npm run dev
